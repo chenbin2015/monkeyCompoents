@@ -33,7 +33,8 @@ export default class Swiper extends Component {
     // 触发滑动的阈值
     threshold: 60,
     // 有多少个item
-    itemCount: 0
+    itemCount: 0,
+    loopTimeout: null
   }
 
   componentDidMount() {
@@ -46,6 +47,10 @@ export default class Swiper extends Component {
       isLoop && this.loop()
       clearInterval(interval)
     }, duration)
+  }
+
+  componentWillUnmount() {
+    clearTimeout(this.state.loopTimeout)
   }
 
   // 初始化滑动事件
@@ -151,7 +156,9 @@ export default class Swiper extends Component {
         }, this.setTransform)
       }
       this.setTransform()
-      setTimeout(this.loop, duration)
+      this.setState({
+        loopTimeout: setTimeout(this.loop, duration)
+      })
     })
   }
 
