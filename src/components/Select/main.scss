@@ -1,0 +1,31 @@
+@import '../../common/css/mixin.scss';
+.kfcSelect {
+  position: relative;
+  height: toRem(60px);
+  font-size: toRem(24px);
+  color: #121212;
+  .value {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    padding: 0 toRem(36px) 0 toRem(20px);
+    height: toRem(60px);
+    line-height: toRem(60px);
+    white-space: nowrap;
+  }
+  select {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    opacity: 0;
+    height: 100%;
+  }
+}
+.defaultClass {
+  border: 1px solid #787878;
+  border-radius: toRem(6px);
+  background: url(https://cmspic-10004025.image.myqcloud.com/07373ce3-f814-417d-8b4d-7941f7898f3d) no-repeat right toRem(10px) center;
+  background-size: toRem(14px) auto;
+}

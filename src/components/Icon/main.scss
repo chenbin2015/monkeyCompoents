@@ -1,0 +1,15 @@
+@import '../../common/css/mixin.scss';
+.icon {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  font-size: toRem(30px);
+  color: #333;
+  img {
+    width: toRem(80px);
+    height: toRem(80px);
+    margin-bottom: toRem(4px);
+  }
+}

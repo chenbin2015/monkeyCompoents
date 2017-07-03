@@ -1,0 +1,18 @@
+@import '../../common/css/mixin.scss';
+.kfcSwitch {
+  width: toRem(100px);
+  height: toRem(56px);
+  padding: toRem(2px);
+  border-radius: toRem(58px);
+  background: #4dd865;
+  .status {
+    width: toRem(56px);
+    height: toRem(56px);
+    background: #fff;
+    border-radius: toRem(56px);
+    transition: all .3s;
+  }
+  .open {
+    margin-left: toRem(44px);
+  }
+}

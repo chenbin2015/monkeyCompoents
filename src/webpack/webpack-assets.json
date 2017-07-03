@@ -1,0 +1,76 @@
+{
+  "javascript": {
+    "main": "/static/bundle.js"
+  },
+  "styles": {},
+  "assets": {
+    "./src/common/css/reset.scss": {
+      "_style": "@charset \"UTF-8\";\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed,\nfigure, figcaption, footer, header, hgroup,\nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline; }\n\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure,\nfooter, header, hgroup, menu, nav, section {\n  display: block; }\n\nbody {\n  font-family: \"Helvetica Neue\",Helvetica,\"PingFang SC\",\"Hiragino Sans GB\",\"Microsoft YaHei\",\"\\5FAE\\8F6F\\96C5\\9ED1\",Arial,sans-serif;\n  line-height: 1.5;\n  -webkit-text-size-adjust: 100%;\n  -webkit-tap-highlight-color: transparent;\n  outline: 0; }\n\nol, ul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before, blockquote:after,\nq:before, q:after {\n  content: '';\n  content: none; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\nbutton {\n  border: none;\n  background: none;\n  outline: none; }\n\ninput {\n  outline: none; }\n"
+    },
+    "./src/components/Area/main.scss": {
+      "area": "area_1MsWf",
+      "input": "input_1eKfb",
+      "label": "label_3tvFY",
+      "dim": "dim_2mIjJ",
+      "bombBox": "bombBox_OeDoq",
+      "title": "title_36nER",
+      "close": "close_1Yfta",
+      "result": "result_3nhvR",
+      "line": "line_QfwH3",
+      "list": "list_3sQUD",
+      "selected": "selected_8g7zY",
+      "_style": ".area_1MsWf .input_1eKfb {\n  font-size: 0.64rem; }\n  .area_1MsWf .input_1eKfb .label_3tvFY {\n    float: left;\n    width: 4rem;\n    text-align: left; }\n  .area_1MsWf .input_1eKfb input {\n    width: 11.73333rem;\n    height: 1.49333rem;\n    padding: 0 1.33333rem 0 0.53333rem;\n    border: 1px solid #e8e8e8;\n    border-radius: 0.16rem;\n    background: url(//cmspic-10004025.image.myqcloud.com/ae666218-7320-4170-ae69-55b4d6a221b3) no-repeat right 0.53333rem center #fff;\n    background-size: 0.37333rem 0.26667rem; }\n\n.area_1MsWf .dim_2mIjJ {\n  position: fixed;\n  top: 0;\n  left: 0;\n  z-index: 1;\n  width: 20rem;\n  height: 100%;\n  background: #000;\n  opacity: .1; }\n\n.area_1MsWf .bombBox_OeDoq {\n  position: fixed;\n  bottom: -1.6rem;\n  left: 0;\n  z-index: 2;\n  overflow: hidden;\n  width: 20rem;\n  height: 16rem;\n  margin: 0 auto;\n  background: #fff;\n  box-shadow: 0 0 0.53333rem rgba(0, 0, 0, 0.5);\n  text-align: center;\n  font-size: 0.74667rem;\n  transition: all .5s; }\n  .area_1MsWf .bombBox_OeDoq .title_36nER {\n    position: relative;\n    width: 100%;\n    height: 2.66667rem;\n    line-height: 2.66667rem;\n    text-align: center;\n    color: #444; }\n    .area_1MsWf .bombBox_OeDoq .title_36nER .close_1Yfta {\n      position: absolute;\n      top: 0;\n      right: 0;\n      width: 1.33333rem;\n      height: 100%;\n      margin-right: 0.53333rem;\n      margin-top: -0.26667rem;\n      font-size: 1.33333rem; }\n  .area_1MsWf .bombBox_OeDoq .result_3nhvR {\n    position: relative;\n    width: 100%;\n    line-height: 1.06667rem;\n    border-bottom: 1px solid #ddd;\n    text-align: left; }\n    .area_1MsWf .bombBox_OeDoq .result_3nhvR .line_QfwH3 {\n      position: absolute;\n      bottom: -1px;\n      z-index: 1;\n      overflow: hidden;\n      height: 1px;\n      background: #f00;\n      transition: all .5s; }\n    .area_1MsWf .bombBox_OeDoq .result_3nhvR span {\n      margin-left: 0.53333rem; }\n  .area_1MsWf .bombBox_OeDoq .list_3sQUD {\n    display: flex;\n    overflow-x: auto;\n    width: 60rem;\n    height: 65%;\n    transition: all .5s; }\n    .area_1MsWf .bombBox_OeDoq .list_3sQUD .selected_8g7zY {\n      background: url(//cmspic-10004025.image.myqcloud.com/2e3b7704-f9e1-4dd1-ab54-6003e6637e14) 18.66667rem center no-repeat;\n      background-size: 1.33333rem auto; }\n    .area_1MsWf .bombBox_OeDoq .list_3sQUD ul {\n      flex: 1;\n      margin-top: 0.53333rem; }\n      .area_1MsWf .bombBox_OeDoq .list_3sQUD ul li {\n        width: 100%;\n        height: 2.13333rem;\n        line-height: 2.13333rem;\n        text-align: left;\n        text-indent: 0.8rem; }\n        .area_1MsWf .bombBox_OeDoq .list_3sQUD ul li span {\n          display: block;\n          width: 2.66667rem;\n          height: 2.66667rem; }\n"
+    },
+    "./src/components/Button/main.scss": {
+      "button": "button_i6mty",
+      "defaultButton": "defaultButton_9P57u",
+      "primaryButton": "primaryButton_1lbjm",
+      "_style": ".button_i6mty {\n  width: 8.8rem;\n  height: 2.4rem;\n  border: 1px solid #00baf7;\n  border-radius: 0.21333rem;\n  text-align: center;\n  font-size: 0.85333rem;\n  outline: none; }\n\n.defaultButton_9P57u {\n  background: #fff;\n  color: #00baf7; }\n\n.primaryButton_1lbjm {\n  background: #00baf7;\n  color: #fff; }\n"
+    },
+    "./src/components/Confirm/main.scss": {
+      "confirm": "confirm_3s1MR",
+      "panel": "panel_1caTm",
+      "text": "text_1T2bz",
+      "buttonList": "buttonList_r_RF0",
+      "line": "line_1BofD",
+      "_style": ".confirm_3s1MR {\n  position: fixed;\n  top: 0px;\n  left: 0px;\n  z-index: 1000;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 100%;\n  height: 100%;\n  background: rgba(0, 0, 0, 0.1); }\n  .confirm_3s1MR .panel_1caTm {\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n    width: 16rem;\n    height: 8rem;\n    background: #fff;\n    border-radius: 0.26667rem; }\n    .confirm_3s1MR .panel_1caTm .text_1T2bz {\n      display: -webkit-box;\n      -webkit-line-clamp: 2;\n      -webkit-box-orient: vertical;\n      align-self: center;\n      overflow: hidden;\n      margin-top: 1.33333rem;\n      text-align: center;\n      font-size: 0.85333rem;\n      line-height: 1.6rem;\n      text-overflow: ellipsis; }\n    .confirm_3s1MR .panel_1caTm .buttonList_r_RF0 {\n      display: flex;\n      justify-content: space-around;\n      align-items: center;\n      height: 2.13333rem;\n      background-image: linear-gradient(to bottom, #e0e0e0 50%, transparent 50%);\n      background-size: 100% 1px;\n      background-repeat: no-repeat;\n      background-position: left top; }\n      .confirm_3s1MR .panel_1caTm .buttonList_r_RF0 .line_1BofD {\n        background-image: linear-gradient(90deg, #e0e0e0 50%, transparent 50%);\n        background-size: 1px 100%;\n        background-repeat: no-repeat;\n        background-position: left top;\n        width: 1px;\n        height: 100%; }\n      .confirm_3s1MR .panel_1caTm .buttonList_r_RF0 button {\n        width: 5.33333rem;\n        height: 1.6rem;\n        background: transparent;\n        border: 0px; }\n"
+    },
+    "./src/components/Icon/main.scss": {
+      "icon": "icon_pzrxi",
+      "_style": ".icon_pzrxi {\n  display: flex;\n  justify-content: center;\n  flex-direction: column;\n  align-items: center;\n  text-decoration: none;\n  font-size: 0.8rem;\n  color: #333; }\n  .icon_pzrxi img {\n    width: 2.13333rem;\n    height: 2.13333rem;\n    margin-bottom: 0.10667rem; }\n"
+    },
+    "./src/components/Select/main.scss": {
+      "kfcSelect": "kfcSelect_2mxAV",
+      "value": "value_JHZLm",
+      "defaultClass": "defaultClass_2cpY4",
+      "_style": ".kfcSelect_2mxAV {\n  position: relative;\n  height: 1.6rem;\n  font-size: 0.64rem;\n  color: #121212; }\n  .kfcSelect_2mxAV .value_JHZLm {\n    position: absolute;\n    left: 0;\n    top: 0;\n    z-index: 0;\n    padding: 0 0.96rem 0 0.53333rem;\n    height: 1.6rem;\n    line-height: 1.6rem;\n    white-space: nowrap; }\n  .kfcSelect_2mxAV select {\n    position: absolute;\n    left: 0;\n    top: 0;\n    z-index: 1;\n    opacity: 0;\n    height: 100%; }\n\n.defaultClass_2cpY4 {\n  border: 1px solid #787878;\n  border-radius: 0.16rem;\n  background: url(https://cmspic-10004025.image.myqcloud.com/07373ce3-f814-417d-8b4d-7941f7898f3d) no-repeat right 0.26667rem center;\n  background-size: 0.37333rem auto; }\n"
+    },
+    "./src/components/Swiper/main.scss": {
+      "panel": "panel_1pdY0",
+      "_style": ".panel_1pdY0 {\n  overflow: hidden;\n  width: 20rem;\n  height: 8rem; }\n  .panel_1pdY0 ul {\n    display: flex;\n    width: 100%;\n    height: 100%; }\n  .panel_1pdY0 li {\n    width: 20rem;\n    box-sizing: border-box; }\n  .panel_1pdY0 img {\n    width: 20rem;\n    height: 8rem; }\n"
+    },
+    "./src/components/Switch/main.scss": {
+      "kfcSwitch": "kfcSwitch_1v4Ns",
+      "status": "status_1yzPh",
+      "open": "open_15NJr",
+      "_style": ".kfcSwitch_1v4Ns {\n  width: 2.66667rem;\n  height: 1.49333rem;\n  padding: 0.05333rem;\n  border-radius: 1.54667rem;\n  background: #4dd865; }\n  .kfcSwitch_1v4Ns .status_1yzPh {\n    width: 1.49333rem;\n    height: 1.49333rem;\n    background: #fff;\n    border-radius: 1.49333rem;\n    transition: all .3s; }\n  .kfcSwitch_1v4Ns .open_15NJr {\n    margin-left: 1.17333rem; }\n"
+    },
+    "./src/components/Tabs/main.scss": {
+      "tabs": "tabs_2viIU",
+      "_style": ".tabs_2viIU {\n  position: fixed;\n  left: 0;\n  bottom: 0;\n  width: 20rem;\n  height: 3.73333rem;\n  box-shadow: 0px -0.05333rem 0.26667rem #ddd; }\n  .tabs_2viIU ul {\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n    width: 18.66667rem;\n    margin: 0 0.66667rem; }\n    .tabs_2viIU ul li a {\n      margin-top: 0.26667rem; }\n"
+    },
+    "./src/containers/API/main.scss": {
+      "_style": ""
+    },
+    "./src/containers/About/main.scss": {
+      "test": "test_1qbej",
+      "_style": ".test_1qbej {\n  color: blue; }\n"
+    },
+    "./src/containers/Demo/main.scss": {
+      "list": "list_15d4S",
+      "sex": "sex_19jQG",
+      "submit": "submit_elcMp",
+      "_style": ".list_15d4S {\n  margin: 0.53333rem;\n  font-size: 0.8rem; }\n  .list_15d4S li {\n    display: flex;\n    height: 1.6rem;\n    margin-bottom: 0.53333rem;\n    line-height: 1.6rem; }\n    .list_15d4S li .sex_19jQG {\n      border: 0px;\n      border-bottom: 1px solid rgba(20, 20, 20, 0.5); }\n  .list_15d4S .submit_elcMp {\n    justify-content: center; }\n"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+@import '../../common/css/mixin.scss';
+.list {
+  margin: toRem(20px);
+  font-size: toRem(30px);
+  li {
+    display: flex;
+    height: toRem(60px);
+    margin-bottom: toRem(20px);
+    line-height: toRem(60px);
+    .sex {
+      border: 0px;
+      border-bottom: 1px solid rgba(20, 20, 20, .5)
+    }
+  }
+  .submit {
+    justify-content: center;
+  }
+}

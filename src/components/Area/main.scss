@@ -1,0 +1,110 @@
+@import '../../common/css/mixin.scss';
+
+.area {
+  .input {
+    font-size: toRem(24px);
+    .label {
+      float: left;
+      width: toRem(150px);
+      text-align: left;
+    }
+    input {
+      width: toRem(440px);
+      height: toRem(56px);
+      padding: 0 toRem(50px) 0 toRem(20px);
+      border: 1px solid #e8e8e8;
+      border-radius: toRem(6px);
+      background: url(//cmspic-10004025.image.myqcloud.com/ae666218-7320-4170-ae69-55b4d6a221b3) no-repeat right toRem(20px) center #fff;
+      background-size: toRem(14px) toRem(10px);
+    }
+  }
+  .dim {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: toRem(750px);
+    height: 100%;
+    background: #000;
+    opacity: .1;
+  }
+  .bombBox {
+    position: fixed;
+    bottom: toRem(-60px);
+    left: 0;
+    z-index: 2;
+    overflow: hidden;
+    width: toRem(750px);
+    height: toRem(600px);
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0 0 toRem(20px) rgba(0, 0, 0, .5);
+    text-align: center;
+    font-size: toRem(28px);
+    transition: all .5s;
+    .title {
+      position: relative;
+      width: 100%;
+      height: toRem(100px);
+      line-height: toRem(100px);
+      text-align: center;
+      color: #444;
+      .close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: toRem(50px);
+        height: 100%;
+        margin-right: toRem(20px);
+        margin-top: toRem(-10px);
+        font-size: toRem(50px);
+      }
+    }
+    .result {
+      position: relative;
+      width: 100%;
+      line-height: toRem(40px);
+      border-bottom: 1px solid #ddd;
+      text-align: left;
+      .line {
+        position: absolute;
+        bottom: -1px;
+        z-index: 1;
+        overflow: hidden;
+        height: 1px;
+        background: #f00;
+        transition: all .5s;
+      }
+      span {
+        margin-left: toRem(20px);
+      }
+    }
+    .list {
+      display: flex;
+      overflow-x: auto;
+      width: toRem(2250px);
+      height: 65%;
+      transition: all .5s;
+      .selected {
+        background: url(//cmspic-10004025.image.myqcloud.com/2e3b7704-f9e1-4dd1-ab54-6003e6637e14) toRem(700px) center no-repeat;
+        background-size: toRem(50px) auto
+      }
+      ul {
+        flex: 1;
+        margin-top: toRem(20px);
+        li {
+          width: 100%;
+          height: toRem(80px);
+          line-height: toRem(80px);
+          text-align: left;
+          text-indent: toRem(30px);
+          span {
+            display: block;
+            width: toRem(100px);
+            height: toRem(100px);
+          }
+        }
+      }
+    }
+  }
+}
