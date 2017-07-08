@@ -10,7 +10,6 @@ import Switch from '../../components/Switch'
 import Button from '../../components/Button'
 import Confirm from '../../components/Confirm'
 import Infinity from '../../components/Infinity'
-import { lists } from './data' 
 import styles from './main.scss'
 
 class Demo extends Component {
@@ -107,16 +106,17 @@ class Demo extends Component {
         </ul>
         <Confirm visible={this.state.visible} text="您当前填写的内容比较重要，请再次确认，确定提交吗？" onConfirm={this.handleConfirm} onCancel={this.handleCancel} />
         <div className={styles.news} >
-          <ul ref="lists" id="lists">
-            {
-              dataList.map((ele, index) => {
-                return (
-                  <li key={index}>{ele.title}</li>
-                )
-              })
-            }
-          </ul>
-          <Infinity count={dataList.length} threshold={20} total={29} panel='lists' action={() => { getList(pageIndex) }} isFetching={isFetching} />
+          <Infinity count={dataList.length} threshold={20} total={29} panel='lists' action={() => { getList(pageIndex) }} isFetching={isFetching} >
+            <ul ref="lists" id="lists">
+              {
+                dataList.map((ele, index) => {
+                  return (
+                    <li key={index}>{ele.title}</li>
+                  )
+                })
+              }
+            </ul>
+          </Infinity>
         </div>
       </div>
     )

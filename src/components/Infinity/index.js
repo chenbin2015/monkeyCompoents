@@ -10,16 +10,25 @@ export default class Infinity extends PureComponent {
   render() {
     const { count, total } = this.props
     return (
-      <div className={styles.infinity}>{count == total ? '没有更多了' : '加载中...'}</div>
+      <div>
+        {this.props.children}
+        <p className={styles.infinity}>{count == total ? '没有更多了' : '加载中...'}</p>
+      </div>
     )
   }
 
   componentDidMount() {
+    if (!this.props.children) {
+      console.error('You must add a child!')
+      return
+    } else if (Object.prototype.toString.call(this.props.children) == '[object Array]' && this.props.children.length > 0) {
+      console.error('Too many child')
+      return
+    }
     this.setState({
       screenHeight: window.innerHeight
     })
     window.addEventListener('scroll', this.scroll)
-    
     this.pagination()
   }
 
