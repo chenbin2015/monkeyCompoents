@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux'
-import helloWorld from './helloWorld'
+import demo from './demo'
 import student from './student'
 
 const todoApp = combineReducers({
-  helloChan: helloWorld,
+  demo,
   student
 })
 

@@ -5,6 +5,7 @@
   bottom: 0;
   width: toRem(750px);
   height: toRem(140px);
+  background: #fff;
   box-shadow: 0px toRem(-2px) toRem(10px) #ddd;
   ul {
     display: flex;
@@ -13,9 +14,8 @@
     width: toRem(700px);
     margin: 0 toRem(25px);
     li {
-      
       a{
-      	margin-top: toRem(10px);
+        margin-top: toRem(10px);
       }
     }
   }
