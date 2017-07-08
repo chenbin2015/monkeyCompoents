@@ -16,3 +16,15 @@
     justify-content: center;
   }
 }
+
+.news {
+  margin-top: toRem(100px);
+  padding-bottom: toRem(150px);
+  border-top: 1px dashed #333;
+  font-size: toRem(30px);
+  text-align: left;
+  color: #333;
+  li {
+    margin: toRem(30px) toRem(20px);
+  }
+}

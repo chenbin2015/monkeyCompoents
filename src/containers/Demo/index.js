@@ -1,14 +1,19 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
 
+import * as demoActions from '../../actions/demo'
 import Swiper from '../../components/Swiper'
 import Area from '../../components/Area'
 import Select from '../../components/Select'
 import Switch from '../../components/Switch'
 import Button from '../../components/Button'
 import Confirm from '../../components/Confirm'
+import Infinity from '../../components/Infinity'
+import { lists } from './data' 
 import styles from './main.scss'
 
-export default class Demo extends Component {
+class Demo extends Component {
   state = {
     sex: [{
       label: '请选择性别',
@@ -39,7 +44,8 @@ export default class Demo extends Component {
         url: 'https://www.sina.com.cn',
         img: 'http://img2.yiihuu.com/upimg/seonews/2016/07/15/01c4eb5747bebf6ac72525ae7d6e98.jpg'
       }
-    ]
+    ],
+    count: 1
   }
 
   handleGetArea = (value) => {
@@ -81,6 +87,7 @@ export default class Demo extends Component {
   }
 
   render() {
+    const { dataList, getList, pageIndex, isFetching } = this.props
     return (
       <div>
         <Swiper data={this.state.swiperData} />
@@ -99,7 +106,27 @@ export default class Demo extends Component {
           </li>
         </ul>
         <Confirm visible={this.state.visible} text="您当前填写的内容比较重要，请再次确认，确定提交吗？" onConfirm={this.handleConfirm} onCancel={this.handleCancel} />
+        <div className={styles.news} >
+          <ul ref="lists" id="lists">
+            {
+              dataList.map((ele, index) => {
+                return (
+                  <li key={index}>{ele.title}</li>
+                )
+              })
+            }
+          </ul>
+          <Infinity count={dataList.length} threshold={20} total={29} panel='lists' action={() => { getList(pageIndex) }} isFetching={isFetching} />
+        </div>
       </div>
     )
   }
 }
+
+const mapStateToProps = state => {
+  return state.demo
+}
+
+const mapDispatchToProps = dispatch => bindActionCreators(demoActions, dispatch)
+
+export default connect(mapStateToProps, mapDispatchToProps)(Demo)
