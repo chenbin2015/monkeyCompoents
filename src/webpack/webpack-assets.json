@@ -43,6 +43,10 @@
       "infinity": "infinity_38LDR",
       "_style": ".infinity_38LDR {\n  width: 100%;\n  height: 1.6rem;\n  line-height: 1.6rem;\n  text-align: center;\n  color: #999; }\n"
     },
+    "./src/components/List/main.scss": {
+      "infinity": "infinity_PvA6Y",
+      "_style": ".infinity_PvA6Y {\n  width: 100%;\n  height: 1.6rem;\n  line-height: 1.6rem;\n  text-align: center;\n  color: #999; }\n"
+    },
     "./src/components/Select/main.scss": {
       "kfcSelect": "kfcSelect_2mxAV",
       "value": "value_JHZLm",
@@ -75,6 +79,13 @@
       "submit": "submit_elcMp",
       "news": "news_3GcAX",
       "_style": ".list_15d4S {\n  margin: 0.53333rem;\n  font-size: 0.8rem; }\n  .list_15d4S li {\n    display: flex;\n    height: 1.6rem;\n    margin-bottom: 0.53333rem;\n    line-height: 1.6rem; }\n    .list_15d4S li .sex_19jQG {\n      border: 0px;\n      border-bottom: 1px solid rgba(20, 20, 20, 0.5); }\n  .list_15d4S .submit_elcMp {\n    justify-content: center; }\n\n.news_3GcAX {\n  margin-top: 2.66667rem;\n  padding-bottom: 4rem;\n  border-top: 1px dashed #333;\n  font-size: 0.8rem;\n  text-align: left;\n  color: #333; }\n  .news_3GcAX li {\n    margin: 0.8rem 0.53333rem; }\n"
+    },
+    "./src/containers/List/main.scss": {
+      "list": "list_3qFyR",
+      "sex": "sex_1BoBb",
+      "submit": "submit_9UFar",
+      "news": "news__ele6",
+      "_style": ".list_3qFyR {\n  margin: 0.53333rem;\n  font-size: 0.8rem; }\n  .list_3qFyR li {\n    display: flex;\n    height: 1.6rem;\n    margin-bottom: 0.53333rem;\n    line-height: 1.6rem; }\n    .list_3qFyR li .sex_1BoBb {\n      border: 0px;\n      border-bottom: 1px solid rgba(20, 20, 20, 0.5); }\n  .list_3qFyR .submit_9UFar {\n    justify-content: center; }\n\n.news__ele6 {\n  margin-top: 2.66667rem;\n  padding-bottom: 4rem;\n  border-top: 1px dashed #333;\n  font-size: 0.8rem;\n  text-align: left;\n  color: #333; }\n  .news__ele6 > div {\n    margin: 0.8rem 0.53333rem; }\n"
     }
   }
 }
