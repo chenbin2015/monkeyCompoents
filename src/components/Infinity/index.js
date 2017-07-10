@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react'
+import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
 
 import styles from './main.scss'
@@ -8,11 +9,11 @@ export default class Infinity extends PureComponent {
     screenHeight: 0
   }
   render() {
-    const { count, total } = this.props
+    const { hasMore } = this.props
     return (
       <div>
         {this.props.children}
-        <p className={styles.infinity}>{count == total ? '没有更多了' : '加载中...'}</p>
+        <p className={styles.infinity}>{hasMore ? '加载中...' : '没有更多了'}</p>
       </div>
     )
   }
@@ -38,7 +39,7 @@ export default class Infinity extends PureComponent {
 
   scroll = () => {
     const { panel, threshold } = this.props
-    var rect = document.querySelector(`#${panel}`).getBoundingClientRect()
+    var rect = ReactDOM.findDOMNode(this).parentNode.getBoundingClientRect()
     let value = rect.bottom - this.state.screenHeight
     if (value < threshold) {
       this.pagination()
@@ -46,8 +47,8 @@ export default class Infinity extends PureComponent {
   }
 
   pagination() {
-    const { action, count, total, isFetching } = this.props
-    if (!isFetching && count < total) {
+    const { action, count, total, isFetching, hasMore } = this.props
+    if (!isFetching && hasMore) {
       console.log('加载中')
       action()
     }
@@ -59,7 +60,6 @@ Infinity.propTypes = {
   threshold: PropTypes.number, // 加载的阈值
   count: PropTypes.number, // 当前的条数
   total: PropTypes.number, // 总数
-  panel: PropTypes.string, // 要滑动加载更多的容器
   isFetching: PropTypes.bool
 }
 
@@ -68,6 +68,5 @@ Infinity.defaultProps = {
   threshold: 100,
   count: 0,
   total: 0,
-  panel: '',
   isFetching: false
 }

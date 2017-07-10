@@ -86,7 +86,7 @@ class Demo extends Component {
   }
 
   render() {
-    const { dataList, getList, pageIndex, isFetching } = this.props
+    const { dataList, getList, pageIndex, isFetching, hasMore } = this.props
     return (
       <div>
         <Swiper data={this.state.swiperData} />
@@ -106,7 +106,7 @@ class Demo extends Component {
         </ul>
         <Confirm visible={this.state.visible} text="您当前填写的内容比较重要，请再次确认，确定提交吗？" onConfirm={this.handleConfirm} onCancel={this.handleCancel} />
         <div className={styles.news} >
-          <Infinity count={dataList.length} threshold={20} total={29} panel='lists' action={() => { getList(pageIndex) }} isFetching={isFetching} >
+          <Infinity threshold={20} action={() => { getList(pageIndex) }} isFetching={isFetching} hasMore={hasMore} >
             <ul ref="lists" id="lists">
               {
                 dataList.map((ele, index) => {
