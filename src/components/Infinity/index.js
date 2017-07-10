@@ -58,15 +58,13 @@ export default class Infinity extends PureComponent {
 Infinity.propTypes = {
   action: PropTypes.func, // 具体加载下一页的事件
   threshold: PropTypes.number, // 加载的阈值
-  count: PropTypes.number, // 当前的条数
-  total: PropTypes.number, // 总数
-  isFetching: PropTypes.bool
+  isFetching: PropTypes.bool,
+  hasMore: PropTypes.bool
 }
 
 Infinity.defaultProps = {
   action: () => {},
   threshold: 100,
-  count: 0,
-  total: 0,
-  isFetching: false
+  isFetching: false,
+  hasMore: true
 }
