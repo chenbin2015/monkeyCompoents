@@ -1,0 +1,8 @@
+@import '../../common/css/mixin.scss';
+.infinity {
+  width: 100%;
+  height: toRem(60px);
+  line-height: toRem(60px);
+  text-align: center;
+  color:#999;
+}

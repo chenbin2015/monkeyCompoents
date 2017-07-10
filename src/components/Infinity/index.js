@@ -32,6 +32,10 @@ export default class Infinity extends PureComponent {
     this.pagination()
   }
 
+  componentWillUnmount() {
+    window.removeListener('scroll', this.scroll)
+  }
+
   scroll = () => {
     const { panel, threshold } = this.props
     var rect = document.querySelector(`#${panel}`).getBoundingClientRect()
