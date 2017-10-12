@@ -9,8 +9,8 @@ class About extends Component {
   render() {
     return (
       <div className={styles.test}>
-        My name is <Link to={{pathname:'/modify'}}>{this.props.student.name}</Link>,I'm a web developer, I like js!
-        <p><Link to={{pathname:'/perf'}}>perf</Link></p>
+        My name is <Link to={{pathname: '/modify'}}>{this.props.student.name}</Link>,I'm a web developer, I like js!
+        <p><Link to={{pathname: '/perf'}}>perf</Link></p>
       </div>
     )
   }

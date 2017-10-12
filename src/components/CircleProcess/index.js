@@ -6,10 +6,9 @@ import styles from './main.scss'
 export default class circleProcess extends Component {
   constructor(props) {
     super(props)
-
     this.state = {}
-
   }
+
   componentDidMount() {
     const { options } = this.props
     this.canvas = this.refs.c
@@ -72,8 +71,8 @@ export default class circleProcess extends Component {
     this.ctx.closePath()
     this.ctx.stroke()
   }
-  drawArc = () => {
 
+  drawArc = () => {
     this.ctx.beginPath()
     this.ctx.lineWidth = this.lineWidth
 
@@ -92,13 +91,13 @@ export default class circleProcess extends Component {
       this._circleX, this._circleY, this.radius, -(Math.PI / 2),
       (this._tempProcess / 100 * 360) * (Math.PI / 180.0) - (Math.PI / 2),
       false
-    );
+    )
     this.ctx.stroke()
   }
   render() {
     const { options } = this.props
     return ( 
-    	<canvas ref = 'c' width="88" height="88" > </canvas>
+      <canvas ref='c' width='88' height='88' ></canvas>
     )
   }
 }

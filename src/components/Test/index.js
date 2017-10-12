@@ -3,14 +3,14 @@ import PropTypes from 'prop-types'
 
 // @pureRender
 export default class Test extends Component {
-	shouldComponentUpdate(nextProps){
-		return nextProps.render
-	}
+  shouldComponentUpdate(nextProps) {
+    return nextProps.render
+  }
   render() {
-    const { selectedIndex, index,text } = this.props
+    const { selectedIndex, index, text } = this.props
     return (
-      <div style={{background: selectedIndex == index ? '#f00' : '#333',width:'100px',height:'100px',margin:'10px'}}>
-      	{text}
+      <div style={{background: selectedIndex == index ? '#f00' : '#333', width: '100px', height: '100px', margin: '10px'}}>
+        {text}
       </div>
     )
   }

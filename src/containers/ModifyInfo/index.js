@@ -2,26 +2,26 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import * as studentActions from '../../actions/student'
+
 class ModifyInfo extends Component {
- 
- 	state = {
- 		name :''
- 	}
+   state = {
+     name: ''
+   }
 
-	handleChangeName = () => {
-		const { setName } = this.props.studentActions
-		setName(this.state.name)
-	}
-	handleNameChange = (e) => {
-		this.setState({
-			name: e.target.value
-		})
-	}
+  handleChangeName = () => {
+    const { setName } = this.props.studentActions
+    setName(this.state.name)
+  }
+  handleNameChange = (e) => {
+    this.setState({
+      name: e.target.value
+    })
+  }
+
   render() {
-
     return (
       <div >
-      	<input value = {this.state.name} onInput = { this.handleNameChange } />
+        <input value = {this.state.name} onInput = { this.handleNameChange } />
         <button onClick={ this.handleChangeName}>修改姓名</button>
       </div>
     )

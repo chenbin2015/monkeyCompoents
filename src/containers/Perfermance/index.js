@@ -6,37 +6,37 @@ import Test from '../../components/Test'
 import styles from './main.scss'
 // @pureRender
 class Perfermance extends Component {
-	constructor(props) {
-	  super(props)
-	
-	  this.state = {
-	  	selectedIndex: -1
-	  }
-	}
-  shouldComponentUpdate(nextProps,nextState){
-  	return !Number.isNaN(nextState.selectedIndex)
+  constructor(props) {
+    super(props)
+  
+    this.state = {
+      selectedIndex: -1
+    }
+  }
+  shouldComponentUpdate(nextProps, nextState) {
+    return !Number.isNaN(nextState.selectedIndex)
   }
   handleInput = (e) => {
-  	this.setState({
-  		selectedIndex: parseInt(e.target.value)
-  	})
+    this.setState({
+      selectedIndex: parseInt(e.target.value)
+    })
   }
 
   renderList() {
-  	var lists=[]
-  	for(let i = 0; i <1000; i++){
-  		lists.push(<Test selectedIndex={this.state.selectedIndex} index={i} key={i} text={i} render={this.state.selectedIndex == i} />)
-  	}
-  	return lists
+    var lists = []
+    for (let i = 0; i < 1000; i++) {
+      lists.push(<Test selectedIndex={this.state.selectedIndex} index={i} key={i} text={i} render={this.state.selectedIndex == i} />)
+    }
+    return lists
   }
 
   render() {
-  	const { colors, texts } = this.state
+    const { colors, texts } = this.state
     return (
       <div>
-      	<input type="number" onInput={this.handleInput} />
-      	<div className={styles.list}>
-      		{ this.renderList() }
+        <input type="number" onInput={this.handleInput} />
+        <div className={styles.list}>
+          { this.renderList() }
         </div>
       </div>
     )

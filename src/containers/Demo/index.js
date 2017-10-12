@@ -102,10 +102,10 @@ class Demo extends Component {
             <label>自动发送信息：</label> <Switch value={this.state.autoSend} disable={false} onChange={this.handleSwitchChange} />
           </li>
           <li>
-            <CircleProcess options={{process:20}} />
+            <CircleProcess options={{process: 20}} />
           </li>
           <li>
-            <CircleProcess options={{process:40}} />
+            <CircleProcess options={{process: 40}} />
           </li>
           <li className={styles.submit}>
             <Button onClick={ this.handleSubmit } />
