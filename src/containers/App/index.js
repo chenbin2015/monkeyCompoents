@@ -5,6 +5,7 @@ import { isEqual } from 'lodash'
 import * as HelloWorldActions from '../../actions/HelloWorld'
 import Tabs from '../../components/Tabs'
 import reset from '../../common/css/reset.scss'
+import styles from './main.scss'
 class App extends Component {
   state = {
     tabList: [
@@ -51,7 +52,7 @@ class App extends Component {
   render() {
     const { tabList } = this.state
     return (
-      <div>
+      <div className={styles.app}>
         {this.props.children}
         <Tabs lists={tabList} />
       </div>
@@ -59,9 +60,7 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = state => {
-  return { helloChan: state.helloChan }
-}
+const mapStateToProps = state => state
 
 const mapDispatchToProps = dispatch => ({
   helloWorldActons: bindActionCreators(HelloWorldActions, dispatch)

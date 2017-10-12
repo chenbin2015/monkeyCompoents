@@ -27,14 +27,14 @@ export default class Infinity extends PureComponent {
       return
     }
     this.setState({
-      screenHeight: window.innerHeight
+      screenHeight: window && window.innerHeight
     })
-    window.addEventListener('scroll', this.scroll)
+    window && window.addEventListener('scroll', this.scroll)
     this.pagination()
   }
 
   componentWillUnmount() {
-    window.removeListener('scroll', this.scroll)
+    window && window.removeEventListener('scroll', this.scroll)
   }
 
   scroll = () => {

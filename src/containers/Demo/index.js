@@ -10,6 +10,7 @@ import Switch from '../../components/Switch'
 import Button from '../../components/Button'
 import Confirm from '../../components/Confirm'
 import Infinity from '../../components/Infinity'
+import CircleProcess from '../../components/CircleProcess'
 import styles from './main.scss'
 
 class Demo extends Component {
@@ -99,6 +100,12 @@ class Demo extends Component {
           </li>
           <li>
             <label>自动发送信息：</label> <Switch value={this.state.autoSend} disable={false} onChange={this.handleSwitchChange} />
+          </li>
+          <li>
+            <CircleProcess options={{process:20}} />
+          </li>
+          <li>
+            <CircleProcess options={{process:40}} />
           </li>
           <li className={styles.submit}>
             <Button onClick={ this.handleSubmit } />

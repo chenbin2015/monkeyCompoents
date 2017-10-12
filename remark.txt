@@ -1,0 +1,15 @@
+  1.实现这种方式1
+  <list
+	        	dataSource={list = [{id: xxx, img: xxx}]}
+	        	item = {ele => <div >{ele.id}: <img src={ele.img}/></div> }
+	        	threshold
+	        	hasMore={hasMore}
+	        	isFetching
+	        	action
+	        />
+2.实现这种方式2
+	        <Infinity threshold hasMore action>
+	        	<ul></ul>
+	        </Infinity>
+3.unmount: remove scroll
+

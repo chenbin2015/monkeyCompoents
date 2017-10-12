@@ -27,6 +27,12 @@
       "primaryButton": "primaryButton_1lbjm",
       "_style": ".button_i6mty {\n  width: 8.8rem;\n  height: 2.4rem;\n  border: 1px solid #00baf7;\n  border-radius: 0.21333rem;\n  text-align: center;\n  font-size: 0.85333rem;\n  outline: none; }\n\n.defaultButton_9P57u {\n  background: #fff;\n  color: #00baf7; }\n\n.primaryButton_1lbjm {\n  background: #00baf7;\n  color: #fff; }\n"
     },
+    "./src/components/CircleProcess/main.scss": {
+      "button": "button_rzSbY",
+      "defaultButton": "defaultButton_2qBXo",
+      "primaryButton": "primaryButton_30J8S",
+      "_style": ".button_rzSbY {\n  width: 8.8rem;\n  height: 2.4rem;\n  border: 1px solid #00baf7;\n  border-radius: 0.21333rem;\n  text-align: center;\n  font-size: 0.85333rem;\n  outline: none; }\n\n.defaultButton_2qBXo {\n  background: #fff;\n  color: #00baf7; }\n\n.primaryButton_30J8S {\n  background: #00baf7;\n  color: #fff; }\n"
+    },
     "./src/components/Confirm/main.scss": {
       "confirm": "confirm_3s1MR",
       "panel": "panel_1caTm",
@@ -73,12 +79,16 @@
     "./src/containers/About/main.scss": {
       "_style": ""
     },
+    "./src/containers/App/main.scss": {
+      "app": "app_32Byt",
+      "_style": ".app_32Byt {\n  width: 20rem;\n  margin: 0 auto;\n  text-align: center; }\n"
+    },
     "./src/containers/Demo/main.scss": {
       "list": "list_15d4S",
       "sex": "sex_19jQG",
       "submit": "submit_elcMp",
       "news": "news_3GcAX",
-      "_style": ".list_15d4S {\n  margin: 0.53333rem;\n  font-size: 0.8rem; }\n  .list_15d4S li {\n    display: flex;\n    height: 1.6rem;\n    margin-bottom: 0.53333rem;\n    line-height: 1.6rem; }\n    .list_15d4S li .sex_19jQG {\n      border: 0px;\n      border-bottom: 1px solid rgba(20, 20, 20, 0.5); }\n  .list_15d4S .submit_elcMp {\n    justify-content: center; }\n\n.news_3GcAX {\n  margin-top: 2.66667rem;\n  padding-bottom: 4rem;\n  border-top: 1px dashed #333;\n  font-size: 0.8rem;\n  text-align: left;\n  color: #333; }\n  .news_3GcAX li {\n    margin: 0.8rem 0.53333rem; }\n"
+      "_style": ".list_15d4S {\n  margin: 0.53333rem;\n  font-size: 0.8rem; }\n  .list_15d4S li {\n    display: flex;\n    height: 1.6rem;\n    margin-bottom: 0.53333rem;\n    line-height: 1.6rem; }\n    .list_15d4S li .sex_19jQG {\n      border: 0px;\n      border-bottom: 1px solid rgba(20, 20, 20, 0.5); }\n  .list_15d4S .submit_elcMp {\n    justify-content: center; }\n\n.news_3GcAX {\n  margin-top: 2.66667rem;\n  padding-bottom: 4rem;\n  border-top: 1px dashed #333;\n  font-size: 0.8rem;\n  text-align: left;\n  color: #333; }\n  .news_3GcAX li {\n    margin: 0.8rem 0.53333rem; }\n\ncanvas {\n  width: 2.34667rem;\n  height: 2.34667rem; }\n"
     },
     "./src/containers/List/main.scss": {
       "list": "list_3qFyR",
@@ -86,6 +96,10 @@
       "submit": "submit_9UFar",
       "news": "news__ele6",
       "_style": ".list_3qFyR {\n  margin: 0.53333rem;\n  font-size: 0.8rem; }\n  .list_3qFyR li {\n    display: flex;\n    height: 1.6rem;\n    margin-bottom: 0.53333rem;\n    line-height: 1.6rem; }\n    .list_3qFyR li .sex_1BoBb {\n      border: 0px;\n      border-bottom: 1px solid rgba(20, 20, 20, 0.5); }\n  .list_3qFyR .submit_9UFar {\n    justify-content: center; }\n\n.news__ele6 {\n  margin-top: 2.66667rem;\n  padding-bottom: 4rem;\n  border-top: 1px dashed #333;\n  font-size: 0.8rem;\n  text-align: left;\n  color: #333; }\n  .news__ele6 > div {\n    margin: 0.8rem 0.53333rem; }\n"
+    },
+    "./src/containers/Perfermance/main.scss": {
+      "list": "list_3tQn2",
+      "_style": ".list_3tQn2 {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-between;\n  padding-bottom: 5.33333rem;\n  color: #fff; }\n"
     }
   }
 }

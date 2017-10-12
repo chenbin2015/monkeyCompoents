@@ -83,7 +83,7 @@ export default class Swiper extends Component {
         displacement: tempDisplacement
       }, () => {
         content.style.transform = `translateX(${this.state.displacement.x}px)`
-        content.style.transition = 'null'
+        content.style.transitionDuration = '0ms'
       })
     })
 
@@ -141,7 +141,7 @@ export default class Swiper extends Component {
       }
       var tempDisplacement = -this.state.currentIndex * swiperPanel.clientWidth
       content.style.transform = `translateX(${tempDisplacement}px)`
-      content.style.transition = 'all .5s'
+      content.style.transitionDuration = '300ms'
     })
   }
 
@@ -200,7 +200,7 @@ Swiper.propTypes = {
 
 Swiper.defaultProps = {
   threshold: 100,
-  duration: 5000,
+  duration: 2000,
   isLoop: true,
   data: []
 }
