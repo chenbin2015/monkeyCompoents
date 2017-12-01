@@ -4,11 +4,6 @@ import path from 'path'
 import Express from 'express'
 import qs from 'qs'
 
-import webpack from 'webpack'
-import webpackDevMiddleware from 'webpack-dev-middleware'
-import webpackHotMiddleware from 'webpack-hot-middleware'
-import webpackConfig from '../webpack/webpack.config'
-
 import React from 'react'
 import { renderToString } from 'react-dom/server'
 import { Provider } from 'react-redux'
@@ -20,29 +15,10 @@ import App from '../containers/App'
 import adjust from '../common/js/adjust'
 
 const app = new Express()
-const port = 3000
-
-
-
-const compiler = webpack(webpackConfig)
+const port = 3200
 
 app.use(Express.static(path.join(__dirname, '../../dist')));
-app.use(webpackDevMiddleware(compiler, {
-  noInfo: true,
-  publicPath: webpackConfig.output.publicPath,
-  hot: true,
-  stats: {
-    colors: true,
-    chunks: false
-  },
-  headers: {
-    'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Methods': 'PUT,POST,GET,DELETE,OPTIONS'
-  },
-  historyApiFallback: true
-}))
 
-app.use(webpackHotMiddleware(compiler, {path: '/__webpack_hmr'}))
 
 function handleRender(req, res) {
   match({ routes: routes, location: req.url }, (err, redirectLocation, renderProps) => {
@@ -81,7 +57,7 @@ function renderFullPage(html, initialState) {
         <title>monkey Component</title>
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <meta charset="utf-8" />
-        <link rel="stylesheet" type="text/css" href="/static/app.css"> 
+        <link rel="stylesheet" type="text/css" href="./app.css"> 
       </head>
       <body>
         <div id="app"><div>${html}</div></div>
@@ -89,8 +65,9 @@ function renderFullPage(html, initialState) {
           window.__INITIAL_STATE__ = ${JSON.stringify(initialState)}
           ${adjust}
         </script>
-        <script async src="/static/main.js"></script>
-        <script async src="/static/vendor.js"></script>
+        <script async src="./main.js"></script>
+        <script async src="./vendor.js"></script>
+        
       </body>
     </html>
     `

@@ -1,0 +1,8 @@
+@import '../../common/css/mixin.scss';
+.list{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding-bottom: toRem(200px);
+	color:#fff;
+}

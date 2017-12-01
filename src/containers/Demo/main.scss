@@ -26,5 +26,10 @@
   color: #333;
   li {
     margin: toRem(30px) toRem(20px);
+
   }
+}
+canvas{
+  width:toRem(88px);
+  height: toRem(88px);
 }

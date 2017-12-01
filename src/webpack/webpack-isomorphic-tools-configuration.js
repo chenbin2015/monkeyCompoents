@@ -1,8 +1,9 @@
 import path from 'path'
 
 var WebpackIsomorphicToolsPlugin = require('webpack-isomorphic-tools/plugin')
+
 module.exports = {
-  webpack_assets_file_path: path.join(__dirname, '/webpack-assets.json'),
+  webpack_assets_file_path: path.join(__dirname, './webpack-assets.json'),
 
   assets: {
     images: {

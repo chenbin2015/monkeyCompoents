@@ -2,28 +2,21 @@ var webpack = require('webpack')
 var path = require('path')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 module.exports = {
-  devtool: 'inline-source-map',
   entry: {
-    main: ['./index.js'],
-    vendor: ['react',
+  	main: './index.js',
+  	vendor:['react',
       'react-redux',
       'react-router',
       'redux',
       'lodash',
       'isomorphic-fetch',
-      'webpack-hot-middleware/client?http://localhost:3001/__webpack_hmr',
-      'react-hot-loader/patch',
-      'webpack/hot/dev-server',
-      'react-addons-perf',
-      'react-hot-loader',
       'history',
-      'babel-register',
-      'babel-polyfill'
-    ]
+      'prop-types',
+      'seamless-immutable']
   },
   output: {
     filename: '[name].js',
-    path: path.join(__dirname, 'dist'),
+    path: path.join(__dirname, '../../dist'),
     publicPath: '/static/'
   },
   module: {
@@ -49,7 +42,17 @@ module.exports = {
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
-      minChunks: 2
+      minChunks: Infinity
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      beautify: false,
+      comments: false,
+      compress: {
+        warnings: false,
+        drop_console: true,
+        collapse_vars: true,
+        reduce_vars: true
+      }
     }),
     new ExtractTextPlugin("app.css")
   ]
